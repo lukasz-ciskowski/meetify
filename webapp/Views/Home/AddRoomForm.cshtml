@@ -4,7 +4,7 @@
 }
 
 <form asp-action="CreateNewRoomMethod" class="flex flex-col gap-4 max-w-[400px] mx-auto">
-    <h1 class="text-2xl text-center">Add new room</h1>
+    <h1 class="text-2xl text-center mt-4">Add new room</h1>
     <div>
         @Html.LabelFor(m => m.Title, new { @class = "label" })
         @Html.TextBoxFor(m => m.Title, new { @class = "input" })
