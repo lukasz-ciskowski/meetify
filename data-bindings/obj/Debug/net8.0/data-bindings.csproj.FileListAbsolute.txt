@@ -1,0 +1,14 @@
+/Users/lukaszciskowski/Projects/meetify/data-bindings/bin/Debug/net8.0/data-bindings.deps.json
+/Users/lukaszciskowski/Projects/meetify/data-bindings/bin/Debug/net8.0/data-bindings.dll
+/Users/lukaszciskowski/Projects/meetify/data-bindings/bin/Debug/net8.0/data-bindings.pdb
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/data-bindings.csproj.AssemblyReference.cache
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/data-bindings.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/data-bindings.AssemblyInfoInputs.cache
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/data-bindings.AssemblyInfo.cs
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/data-bindings.csproj.CoreCompileInputs.cache
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/data-bindings.dll
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/refint/data-bindings.dll
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/data-bindings.pdb
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/ref/data-bindings.dll
+/Users/lukaszciskowski/Projects/meetify/data-bindings/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/lukaszciskowski/Projects/meetify/data-bindings/obj/Debug/net8.0/data-bin.9A64F3DF.Up2Date

@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>b3b2a96d-86d1-4994-ba54-71f03a1c78f5</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="styles\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\css\app.tailwind.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Auth0.AspNetCore.Authentication" Version="1.4.1" />
+      <PackageReference Include="HiveMQtt" Version="0.24.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\data-bindings\data-bindings.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="wwwroot\icon-font\.DS_Store" />
+      <Content Include="wwwroot\icon-font\demo\.DS_Store" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Newtonsoft.Json">
+        <HintPath>..\..\..\..\..\usr\local\share\dotnet\sdk\8.0.404\Newtonsoft.Json.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

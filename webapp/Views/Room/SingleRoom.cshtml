@@ -1,0 +1,79 @@
+@model server.Models.RoomWithMessages
+@{
+    ViewData["Title"] = "Room | Meetify";
+}
+
+
+<div class="flex flex-col h-full">
+    <div class="h-full overflow-auto w-full flex flex-col-reverse min-h-0 pb-2" id="messages-list">
+        @{
+            Model.Messages.Reverse();
+            foreach (var messageContext in Model.Messages)
+            {
+                @Html.Partial("ChatMessage", messageContext)
+            }
+        }
+    </div>
+    <form asp-action="SendMessage" class="flex gap-4 px-2 pb-2" id="send-message-form">
+        @Html.Partial("SendMessage")
+    </form>
+</div>
+
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chat")
+        .build();
+    
+    function appendMessage(newMessage) {
+        fetch('/render-chat-message', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newMessage)
+        })
+            .then(response => response.text())
+            .then(html => {
+                const messagesList = document.getElementById('messages-list');
+                const messageElement = document.createElement('div');
+                messageElement.innerHTML = html;
+                messagesList.prepend(messageElement);
+            });
+    }
+
+    connection.start().then(() => {
+        console.log("Connected to SignalR hub.");
+        const roomId = "@ViewBag.RoomId";
+        connection.invoke("JoinRoom", roomId).catch(err => console.error(err));
+        
+    }).catch(err => console.error(err));
+
+    connection.on("ReceiveMessage", (message) => {
+        appendMessage(JSON.parse(message));
+    });
+</script>
+
+<script>
+    const form = document.getElementById('send-message-form');
+    
+    form.addEventListener('submit', async (e) => {
+        const roomId = "@ViewBag.RoomId";
+        const idToken = "@ViewBag.IdToken";
+        e.preventDefault();
+        const formData = new FormData(form);
+        
+        const jsonFormData = {
+            MessageText: formData.get('MessageText')
+        }
+        
+        const response = await fetch(`/api/rooms/${roomId}/messages`, {
+            method: 'POST',
+            body: JSON.stringify(jsonFormData),
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `Bearer ${idToken}`
+            }
+        });
+        if (response.ok) {
+            form.reset();
+        }
+    });
+</script>

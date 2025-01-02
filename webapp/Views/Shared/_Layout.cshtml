@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - webapp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/app.css" asp-append-version="true"/>
+    <link href="~/icon-font/lineicons.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js" integrity="sha512-7SRCYIJtR6F8ocwW7UxW6wGKqbSyqREDbfCORCbGLatU0iugBLwyOXpzhkPyHIFdBO0K2VCu57fvP2Twgx1o2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="flex flex-col w-full h-screen bg-background/90">
+<header class="bg-background py-2 px-6">
+    <nav class="max-w-screen-xl mx-auto flex justify-between items-stretch">
+        <a class="text-lgs flex items-center" asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/images/logo.png" alt="logo" class="logo" width="100px"/>
+        </a>
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-2">
+                <small>@ViewBag.User.Name</small>
+                <img src=@ViewBag.User.Image alt="user" class="w-8 h-8 rounded-full"/>
+            </div>
+        </div>
+    </nav>
+</header>
+<main role="main" class="h-full overflow-hidden">
+    @RenderBody()
+</main>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

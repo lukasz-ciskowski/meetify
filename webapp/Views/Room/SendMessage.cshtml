@@ -1,0 +1,11 @@
+<div class="flex gap-2 w-full">
+    @Html.TextBox("MessageText", "", new
+    {
+        @class = "input w-full",
+        @placeholder = "Type your message here",
+    })
+    <button class="button" type="submit">
+        Send
+        <i class="lni lni-arrow-right"></i>
+    </button>
+</div>

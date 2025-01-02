@@ -1,0 +1,25 @@
+@model server.Models.MessageWithUser
+
+<div class="flex p-1 gap-2 items-center">
+    @{
+        var isCurrentUser = Model.User?.UserId == ViewBag.User.Id;
+        if (isCurrentUser)
+        {
+            <div class="w-full flex p-1 gap-2 items-center justify-end">
+                <div class="bg-slate-300 rounded-lg px-4 py-2 text-background">
+                    @Model.Message.MessageText
+                </div>
+                <img src="@Model.User.Picture" alt="user" class="w-8 h-8 rounded-full"/>
+            </div>
+        }
+        else
+        {
+            <div class="flex p-1 gap-2 items-center">
+                <img src="@Model.User.Picture" alt="user" class="w-8 h-8 rounded-full"/>
+                <div class="bg-white rounded-lg px-4 py-2 text-background">
+                    @Model.Message.MessageText
+                </div>
+            </div>
+        }
+    }
+</div>

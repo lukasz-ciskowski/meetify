@@ -1,0 +1,36 @@
+@model server.Models.CreateRoomModel
+@{
+    ViewData["Title"] = "Add room | Meetify";
+}
+
+<form asp-action="CreateNewRoomMethod" class="flex flex-col gap-4 max-w-[400px] mx-auto">
+    <h1 class="text-2xl text-center">Add new room</h1>
+    <div>
+        @Html.LabelFor(m => m.Title, new { @class = "label" })
+        @Html.TextBoxFor(m => m.Title, new { @class = "input" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Description, new { @class = "label" })
+        @Html.TextAreaFor(m => m.Description, new { @class = "input" })
+    </div>
+    <div class="flex flex-col gap-2">
+        @Html.LabelFor(m => m.Visibility, "Visibility", new { @class = "label" })
+        <div class="flex gap-2 items-center">
+            @Html.RadioButtonFor(m => m.Visibility, server.Models.RoomVisibilities.Public, new { @id = "public" })
+            <label for="public" class="cursor-pointer flex items-center gap-1">Public <i class="lni lni-globe-1"></i></label>
+        </div>
+        <div class="flex gap-2 items-center">
+            @Html.RadioButtonFor(m => m.Visibility, server.Models.RoomVisibilities.Private, new { @id = "private" })
+            <label for="private" class="cursor-pointer flex items-center gap-1">Private <i class="lni lni-locked-2"></i></label>
+        </div>
+    </div>
+    @{
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="text-error text-center">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+    }
+    <button type="submit" class="button">Submit</button>
+</form>

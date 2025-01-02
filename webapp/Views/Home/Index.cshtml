@@ -1,0 +1,80 @@
+﻿@model IEnumerable<server.Models.Room>
+@{
+    ViewData["Title"] = "Rooms | Meetify";
+}
+
+<div class="flex flex-col p-4 w-full max-w-[800px] mx-auto">
+    <div class="flex justify-end w-full">
+        <a class="text-lgs flex items-center" asp-area="" asp-controller="Home" asp-action="AddRoomForm">
+            <button class="button">
+                Add new room
+                <i class="lni lni-plus"></i>
+            </button>
+        </a>
+    </div>
+    <div class="flex flex-col gap-12">
+    @{
+        var publicRooms = Model.Where(r => r.Visibility == server.Models.RoomVisibilities.Public);
+        var privateRooms = Model.Where(r => r.Visibility == server.Models.RoomVisibilities.Private);
+
+        if (publicRooms.Any())
+        {
+            <div class="flex flex-col gap-4 w-full">
+                <div class="text-2xl flex items-center gap-2">
+                    <i class="lni lni-globe-1"></i>
+                    Public rooms
+                </div>
+                <div class="flex flex-col gap-4">
+                    @foreach (var room in publicRooms)
+                    {
+                        <div class="flex p-4 border border-gray-200 rounded-lg bg-background justify-between">
+                            <div class="flex flex-col">
+                                <h2 class="text-xl"># @room.Title</h2>
+                                <p class="text-xs text-gray-400">@room.Description</p>
+                            </div>
+                            <a asp-area="" asp-controller="Room" asp-action="SingleRoom" asp-route-id="@room.Id">
+                                <button class="button">Join <i class="lni lni-arrow-right"></i></button>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+        
+        if (privateRooms.Any())
+        {
+            <div class="flex flex-col gap-4 w-full">
+                <div class="text-2xl flex items-center gap-2">
+                    <i class="lni lni-locked-2"></i>
+                    Private rooms
+                </div>
+                <div class="flex flex-col gap-4">
+                    @foreach (var room in privateRooms)
+                    {
+                        <div class="flex p-4 border border-gray-200 rounded-lg bg-background justify-between">
+                            <div class="flex flex-col">
+                                <h2 class="text-xl"># @room.Title</h2>
+                                <p class="text-xs text-gray-400">@room.Description</p>
+                            </div>
+                            <div class="flex gap-8">
+                                <div class="flex items-center gap-1">
+                                    <i class="lni lni-user-4"></i>
+                                    @{
+                                        var collaboratorsCount = room.Collaborators?.Count ?? 0;
+                                        // Add 1 to include the room owner
+                                        var totalCount = collaboratorsCount + 1;
+                                        <span class="font-bold">@totalCount</span>
+                                    }
+                                </div>
+                                <a asp-area="" asp-controller="Room" asp-action="SingleRoom" asp-route-id="@room.Id">
+                                    <button class="button">Join <i class="lni lni-arrow-right"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    }
+    </div>
+</div>

@@ -1,0 +1,105 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/obj/Debug/net8.0/scopedcss/projectbundle/webapp.bundle.scp.css",
+      "PackagePath": "staticwebassets/webapp.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/css/app.tailwind.css",
+      "PackagePath": "staticwebassets/css/app.tailwind.css"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/css/styles.css",
+      "PackagePath": "staticwebassets/css/styles.css"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/.DS_Store",
+      "PackagePath": "staticwebassets/icon-font/.DS_Store"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/css/icons.css",
+      "PackagePath": "staticwebassets/icon-font/css/icons.css"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/demo.html",
+      "PackagePath": "staticwebassets/icon-font/demo.html"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/demo/.DS_Store",
+      "PackagePath": "staticwebassets/icon-font/demo/.DS_Store"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/demo/css/style.css",
+      "PackagePath": "staticwebassets/icon-font/demo/css/style.css"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/fonts/Lineicons.eot",
+      "PackagePath": "staticwebassets/icon-font/fonts/Lineicons.eot"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/fonts/Lineicons.svg",
+      "PackagePath": "staticwebassets/icon-font/fonts/Lineicons.svg"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/fonts/Lineicons.ttf",
+      "PackagePath": "staticwebassets/icon-font/fonts/Lineicons.ttf"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/fonts/Lineicons.woff",
+      "PackagePath": "staticwebassets/icon-font/fonts/Lineicons.woff"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/fonts/Lineicons.woff2",
+      "PackagePath": "staticwebassets/icon-font/fonts/Lineicons.woff2"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/less/icons.less",
+      "PackagePath": "staticwebassets/icon-font/less/icons.less"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/lineicons.css",
+      "PackagePath": "staticwebassets/icon-font/lineicons.css"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/scss/icons.scss",
+      "PackagePath": "staticwebassets/icon-font/scss/icons.scss"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/icon-font/unicodesMap.json",
+      "PackagePath": "staticwebassets/icon-font/unicodesMap.json"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/images/logo.png",
+      "PackagePath": "staticwebassets/images/logo.png"
+    },
+    {
+      "Id": "/Users/lukaszciskowski/Projects/meetify/webapp/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.webapp.props",
+      "PackagePath": "build\\webapp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.webapp.props",
+      "PackagePath": "buildMultiTargeting\\webapp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.webapp.props",
+      "PackagePath": "buildTransitive\\webapp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.webapp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
