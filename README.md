@@ -4,7 +4,7 @@ _This application was build as an university project where the main requirement 
 
 # Intro
 
-Meetly is a simple chat applications for users. The goal for this project was to build a straightforward application that uses both server rendering for building a web application, simple API endpoints and database communication
+Meetify is a simple chat applications for users. The goal for this project was to build a straightforward application that uses both server rendering for building a web application, simple API endpoints and database communication
 
 **Main features:**
 - Creating public, private rooms
